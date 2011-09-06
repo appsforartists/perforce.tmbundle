@@ -41,7 +41,7 @@ def get_textmate_file_list():
 def get_files_relative_to_p4_workspace(file_list):
 	'''
 	Returns a new list that only contains files from file_list that are inside
-	the P4 current workspace, with paths relative to the workspace.
+	the P4 current workspace, with paths relative to it.
 	'''
 	
 	connect_to_p4()

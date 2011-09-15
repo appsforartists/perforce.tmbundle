@@ -194,7 +194,10 @@ def run_p4_command(command, file_list = [], fallback_command = None, fallback_si
 			return p4_response
 			
 		except P4Exception:
-			if not fallback_silently or (fallback_silently and not fallback_command):
+			if fallback_command: 
+				p4_response = run_command(fallback_command)
+			
+			elif not fallback_silently or (fallback_silently and not fallback_command):
 				if p4.warnings:
 					print('<h2>Warnings:</h2>')
 					for message in p4.warnings:

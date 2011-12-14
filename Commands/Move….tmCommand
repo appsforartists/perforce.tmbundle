@@ -55,7 +55,7 @@ else:
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@4</string>
+	<string>@y</string>
 	<key>name</key>
 	<string>Move…</string>
 	<key>output</key>

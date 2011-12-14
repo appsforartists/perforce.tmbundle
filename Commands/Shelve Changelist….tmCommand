@@ -26,7 +26,7 @@ print(stdout_to_html(p4_response))</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@4</string>
+	<string>@y</string>
 	<key>name</key>
 	<string>Shelve Changelist…</string>
 	<key>output</key>

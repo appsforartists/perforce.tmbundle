@@ -35,6 +35,8 @@ print(html_response)</string>
 	<string>newWindow</string>
 	<key>scope</key>
 	<string>attr.scm.p4</string>
+	<key>semanticClass</key>
+	<string>action.scm.blame</string>
 	<key>uuid</key>
 	<string>D6F5F368-C476-4882-82EA-D11E22A445BF</string>
 	<key>version</key>

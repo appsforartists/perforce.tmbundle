@@ -2,30 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>changed</key>
-	<dict>
-		<key>inputFormat</key>
-		<string>text</string>
-		<key>outputCaret</key>
-		<string>afterOutput</string>
-		<key>outputFormat</key>
-		<string>html</string>
-		<key>outputLocation</key>
-		<string>newWindow</string>
-		<key>scope</key>
-		<string>attr.scm.p4</string>
-		<key>semanticClass</key>
-		<string>action.scm.update</string>
-		<key>version</key>
-		<integer>2</integer>
-	</dict>
-	<key>deleted</key>
-	<array>
-		<string>keyEquivalent</string>
-		<string>output</string>
-	</array>
-	<key>isDelta</key>
-	<true/>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/python2.7
+
+def add_tm_support_to_path():
+	import os, sys
+	sys.path.append(os.environ['TM_BUNDLE_SUPPORT'])
+
+add_tm_support_to_path()
+
+from perforce_bundle_helper import *
+
+p4_response = run_p4_command_on_selected_textmate_files('sync')
+
+print(stdout_to_html(p4_response))</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@4</string>
+	<key>name</key>
+	<string>Sync with Depot</string>
+	<key>output</key>
+	<string>showAsHTML</string>
 	<key>uuid</key>
 	<string>48C3E848-57FC-4633-814E-724CE05AC124</string>
 </dict>

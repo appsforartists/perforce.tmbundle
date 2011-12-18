@@ -2,28 +2,38 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>changed</key>
-	<dict>
-		<key>inputFormat</key>
-		<string>text</string>
-		<key>outputCaret</key>
-		<string>afterOutput</string>
-		<key>outputFormat</key>
-		<string>html</string>
-		<key>outputLocation</key>
-		<string>newWindow</string>
-		<key>scope</key>
-		<string>attr.scm.p4</string>
-		<key>version</key>
-		<integer>2</integer>
-	</dict>
-	<key>deleted</key>
-	<array>
-		<string>keyEquivalent</string>
-		<string>output</string>
-	</array>
-	<key>isDelta</key>
-	<true/>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/python2.7
+# -*- coding: utf-8 -*-
+
+def add_tm_support_to_path():
+	import os, sys
+	sys.path.append(os.environ['TM_BUNDLE_SUPPORT'])
+	sys.path.append(os.environ['TM_SUPPORT_PATH'] + '/lib')
+
+add_tm_support_to_path()
+
+
+from perforce_bundle_helper import *
+import dialog
+
+prompt_response = dialog.get_string(title = "Unshelve Changelist...", prompt = "Which changelist would you like to unshelve?")
+
+if prompt_response:
+	p4_response = run_p4_command('unshelve -s ' + prompt_response)
+	print(stdout_to_html(p4_response))
+else:
+	print("Command cancelled")</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@4</string>
+	<key>name</key>
+	<string>Unshelve Changelist…</string>
+	<key>output</key>
+	<string>showAsHTML</string>
 	<key>uuid</key>
 	<string>70C7222E-7803-4C40-9381-25B8F09483A1</string>
 </dict>

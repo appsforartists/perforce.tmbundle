@@ -20,7 +20,7 @@ print('\n'.join(p4_response))</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@y</string>
+	<string>@4</string>
 	<key>name</key>
 	<string>Edit in workspace</string>
 	<key>output</key>

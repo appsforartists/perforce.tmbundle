@@ -24,7 +24,7 @@ rescan_project()
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@y</string>
+	<string>@4</string>
 	<key>name</key>
 	<string>Delete from Depot</string>
 	<key>output</key>

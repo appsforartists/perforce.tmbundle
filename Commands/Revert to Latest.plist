@@ -23,7 +23,7 @@ rescan_project()
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@y</string>
+	<string>@4</string>
 	<key>name</key>
 	<string>Revert</string>
 	<key>output</key>

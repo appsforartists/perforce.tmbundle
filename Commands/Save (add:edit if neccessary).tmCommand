@@ -4,11 +4,6 @@
 <dict>
 	<key>changed</key>
 	<dict>
-		<key>command</key>
-		<string>#!/usr/bin/env bash
-[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
-
-open "http://perforce.com/perforce/doc.082/manuals/cmdref/index.html"</string>
 		<key>inputFormat</key>
 		<string>text</string>
 		<key>outputCaret</key>
@@ -16,7 +11,11 @@ open "http://perforce.com/perforce/doc.082/manuals/cmdref/index.html"</string>
 		<key>outputFormat</key>
 		<string>text</string>
 		<key>outputLocation</key>
-		<string>discard</string>
+		<string>toolTip</string>
+		<key>scope</key>
+		<string>attr.scm.p4</string>
+		<key>semanticClass</key>
+		<string>callback.document.export</string>
 		<key>version</key>
 		<integer>2</integer>
 	</dict>
@@ -28,6 +27,6 @@ open "http://perforce.com/perforce/doc.082/manuals/cmdref/index.html"</string>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>
-	<string>D877FFC4-1170-452B-910B-AB4F0EE743C6</string>
+	<string>0D7B4536-7B90-47ED-BB1C-5A24CEEFB078</string>
 </dict>
 </plist>
